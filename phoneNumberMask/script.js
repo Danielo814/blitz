@@ -1,17 +1,17 @@
-let test = document.getElementById("input");
+let phoneNum = document.getElementById("input");
 
-test.addEventListener(
+phoneNum.addEventListener(
   "keyup",
   function(evt) {
-    let st = this.value.split("");
-    console.log(st);
+    let numArr = this.value.split("");
+    console.log(numArr);
     if (this.value.length == 4) {
-      st.splice(0, 0, "(");
-      st.splice(4, 0, ")");
-      this.value = st.join("");
+      numArr.splice(0, 0, "(");
+      numArr.splice(4, 0, ")");
+      this.value = numArr.join("");
     } else if (this.value.length == 8) {
-      st.splice(8, 0, "-");
-      this.value = st.join("");
+      numArr.splice(8, 0, "-");
+      this.value = numArr.join("");
     }
   },
   false
