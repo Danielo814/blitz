@@ -4,3 +4,8 @@
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
+
+.form-container {
+  text-align: center;
+  padding-top: 150px;
+}
