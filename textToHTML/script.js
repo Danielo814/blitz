@@ -3,20 +3,26 @@ fetch("/textFile.txt")
   .then(data => {
     let body = document.getElementById("body");
     var dataArr = data.split("\n");
-    console.log(dataArr[0][0]);
     for (let i = 0; i < dataArr.length; i++) {
-      console.log(dataArr[i].slice(1, dataArr[i].length));
-      if (dataArr[i][0] === "#" && dataArr[i][1] !== "#") {
-        body.innerHTML +=
-          "<h1>" + dataArr[i].slice(1, dataArr[i].length) + "</h1>";
-      } else if (dataArr[i].slice(0, 2) === "##" && dataArr[i][2] !== "#") {
-        body.innerHTML +=
-          "<h2>" + dataArr[i].slice(2, dataArr[i].length) + "</h2>";
-      } else if (dataArr[i].slice(0, 3) === "###") {
-        body.innerHTML +=
-          "<h3>" + dataArr[i].slice(3, dataArr[i].length) + "</h3>";
-      } else {
-        body.innerHTML += "<p>" + dataArr[i] + "</p>";
-      }
+        body.innerHTML += testfunc(dataArr[i]);
     }
   });
+
+[
+  "# this should be an h1",
+  "## this should be an h2",
+  "### this should be an h3",
+  ""
+];
+
+function testfunc(data) {
+  if (data[0] === "#" && data[1] !== "#") {
+    return "<h1>" + data.slice(1, data.length) + "</h1>";
+  } else if (data.slice(0, 2) === "##" && data[2] !== "#") {
+    return "<h2>" + data.slice(2, data.length) + "</h2>";
+  } else if (data.slice(0, 3) === "###") {
+    return "<h3>" + data.slice(3, data.length) + "</h3>";
+  } else {
+    return "<p>" + data + "</p>";
+  }
+}
