@@ -5,13 +5,20 @@ phoneNum.addEventListener(
   function(evt) {
     let numArr = this.value.split("");
     console.log(numArr);
-    if (this.value.length == 4) {
+    if (this.value.length == 4 && evt.key !== "Backspace") {
       numArr.splice(0, 0, "(");
       numArr.splice(4, 0, ")");
-      this.value = numArr.join("");
-    } else if (this.value.length == 8) {
+      let output = numArr.join("");
+      this.value = output;
+      //   this.value = numArr.join("");
+    } else if (this.value.length == 8 && evt.key !== "Backspace") {
       numArr.splice(8, 0, "-");
-      this.value = numArr.join("");
+      console.log("test");
+      console.log(evt.key);
+      output = numArr.join("");
+      this.value = output;
+
+      //   this.value = numArr.join("");
     }
   },
   false
