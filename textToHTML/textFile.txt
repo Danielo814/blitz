@@ -1,1 +1,13 @@
 # this should be an h1
+## this should be an h2
+### this should be an h3
+##### this should be an h5
+random string
+
+samson is a puppy, *super* cute
+
+heisenberg is a kitty, _she's 7 years old_
+
+- walk the dog
+- feed the cat
+- watch baby yoda
