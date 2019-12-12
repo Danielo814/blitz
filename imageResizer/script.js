@@ -1,15 +1,18 @@
+var imageProperties = document.querySelectorAll(".imageProperties");
 var myImageUrl = document.getElementById("imgUrl");
-myImageUrl.addEventListener("keydown", function(event) {
-  if (event.keyCode === 13) {
-    createImage(myImageUrl.value);
-  }
+imageProperties.forEach(item => {
+  item.addEventListener("keydown", event => {
+    if (event.keyCode === 13) {
+      createImage(myImageUrl.value);
+    }
+  });
 });
 
 function createImage(url) {
   let newImage = document.createElement("img");
   newImage.setAttribute("src", `${url}`);
-  //   assignWidth(newImage);
-  //   assignHeight(newImage);
+  assignWidth(newImage);
+  assignHeight(newImage);
   document.body.append(newImage);
 }
 
