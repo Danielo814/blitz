@@ -1,9 +1,8 @@
-function imgFunc() {
-  let myImage = document.getElementById("imgUrl").value;
-  let newImage = document.createElement("img");
-  newImage.setAttribute("src", `${myImage}`);
-  document.body.append(newImage);
-  console.log(newImage);
-
-  console.log(typeof myImage);
-}
+var myImage = document.getElementById("imgUrl");
+myImage.addEventListener("keydown", function(event) {
+  if (event.keyCode === 13) {
+    let newImage = document.createElement("img");
+    newImage.setAttribute("src", `${myImage.value}`);
+    document.body.append(newImage);
+  }
+});
