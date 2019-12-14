@@ -11,17 +11,15 @@ imageProperties.forEach(item => {
 function createImage(url) {
   let newImage = document.createElement("img");
   newImage.setAttribute("src", `${url}`);
-  assignWidth(newImage);
-  assignHeight(newImage);
+  assignDimensions(newImage);
   document.body.append(newImage);
 }
 
-function assignWidth(image) {
+function assignDimensions(image) {
   let width = document.getElementById("width");
-  image.setAttribute("style", `width: ${width.value}px`);
-}
-
-function assignHeight(image) {
   let height = document.getElementById("height");
-  image.setAttribute("style", `height: ${height.value}px`);
+  image.setAttribute(
+    "style",
+    `width: ${width.value}px; height: ${height.value}px`
+  );
 }
