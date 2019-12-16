@@ -3,22 +3,27 @@ var myImageUrl = document.getElementById("imgUrl");
 imageProperties.forEach(item => {
   item.addEventListener("keydown", event => {
     if (event.keyCode === 13) {
-      createImage(myImageUrl.value);
+      entryPoint(myImageUrl.value);
     }
   });
 });
 
-function createImage(url) {
+function entryPoint(url) {
   let numImages = document.getElementsByTagName("IMG").length;
   if (checkImageExists(numImages)) {
     let imageId = document.getElementById("image");
     removeImage(imageId);
   }
+  let newImage = createImage(url);
+  assignDimensions(newImage);
+  document.body.append(newImage);
+}
+
+function createImage(url) {
   let newImage = document.createElement("img");
   newImage.setAttribute("src", `${url}`);
   newImage.setAttribute("id", "image");
-  assignDimensions(newImage);
-  document.body.append(newImage);
+  return newImage;
 }
 
 function assignDimensions(image) {
