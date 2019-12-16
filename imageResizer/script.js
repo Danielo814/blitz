@@ -9,8 +9,13 @@ imageProperties.forEach(item => {
 });
 
 function createImage(url) {
+  if (document.getElementsByTagName("IMG").length > 0) {
+    let imageId = document.getElementById("image");
+    imageId.parentNode.removeChild(imageId);
+  }
   let newImage = document.createElement("img");
   newImage.setAttribute("src", `${url}`);
+  newImage.setAttribute("id", "image");
   assignDimensions(newImage);
   document.body.append(newImage);
 }
