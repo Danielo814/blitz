@@ -9,9 +9,10 @@ imageProperties.forEach(item => {
 });
 
 function createImage(url) {
-  if (document.getElementsByTagName("IMG").length > 0) {
+  let numImages = document.getElementsByTagName("IMG").length;
+  if (checkImageExists(numImages)) {
     let imageId = document.getElementById("image");
-    imageId.parentNode.removeChild(imageId);
+    removeImage(imageId);
   }
   let newImage = document.createElement("img");
   newImage.setAttribute("src", `${url}`);
@@ -27,4 +28,13 @@ function assignDimensions(image) {
     "style",
     `width: ${width.value}px; height: ${height.value}px`
   );
+}
+
+function checkImageExists(numImages) {
+  if (numImages > 0) return true;
+  return false;
+}
+
+function removeImage(imageId) {
+  return imageId.parentNode.removeChild(imageId);
 }
