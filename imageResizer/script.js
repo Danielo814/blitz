@@ -3,12 +3,12 @@ var myImageUrl = document.getElementById("imgUrl");
 imageProperties.forEach(item => {
   item.addEventListener("keydown", event => {
     if (event.keyCode === 13) {
-      entryPoint(myImageUrl.value);
+      mainFunction(myImageUrl.value);
     }
   });
 });
 
-function entryPoint(url) {
+function mainFunction(url) {
   let numImages = document.getElementsByTagName("IMG").length;
   if (checkImageExists(numImages)) {
     let imageId = document.getElementById("image");
@@ -16,7 +16,12 @@ function entryPoint(url) {
   }
   let newImage = createImage(url);
   assignDimensions(newImage);
-  document.body.append(newImage);
+  appendToHTML(newImage);
+}
+
+function appendToHTML(newImage) {
+  let imageContainer = document.getElementById("imageContainer");
+  imageContainer.appendChild(newImage);
 }
 
 function createImage(url) {
