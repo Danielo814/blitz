@@ -48,3 +48,4 @@ function checkImageExists(numImages) {
 function removeImage(imageId) {
   return imageId.parentNode.removeChild(imageId);
 }
+
