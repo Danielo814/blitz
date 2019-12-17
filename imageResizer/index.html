@@ -5,14 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
+    <div id="instructions">
+      <p>
+        These input boxes take a URL, height and width. To show the original
+        element before resizing, paste the URL of the image in the image box and
+        press the enter key. To resize the image, enter the height and width in
+        the correlating boxes and press the enter key. For example, if you want
+        your image to be sized to be 50 pixels by 50 pixels you'd enter your
+        height as "50" and your width as "50".
+      </p>
+    </div>
     <div id="inputContainer">
-      Image URL: <input class="imageProperties" type="text" id="imgUrl" " />
-      width:
-      <input class="imageProperties" type="text" id="width" /> height:
-      <input class="imageProperties" type="text" id="height" />
+      <input
+        class="imageProperties"
+        type="text"
+        id="imgUrl"
+        placeholder="Image URL goes here"
+      />
+      <input
+        class="imageProperties dimensions"
+        type="text"
+        id="width"
+        placeholder="Width to resize to (px)"
+      />
+      <input
+        class="imageProperties dimensions"
+        type="text"
+        id="height"
+        placeholder="Height to resize to (px)"
+      />
     </div>
     <br />
     <br />

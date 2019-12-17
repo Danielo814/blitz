@@ -5,3 +5,19 @@
 #imageContainer {
   text-align: center;
 }
+
+.dimensions {
+  margin-left: 20px;
+}
+
+#instructions {
+  text-align: center;
+}
+
+p {
+  padding: 60px 300px 10px 300px;
+}
+
+* {
+  font-family: "Crimson Text", serif;
+}
