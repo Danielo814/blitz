@@ -3,7 +3,12 @@ document.body.addEventListener("keyup", function(event) {
 });
 
 function addKey(keyEvent) {
-  console.log(keyEvent);
+  divContainer = document.getElementById("keyDisplayContainer");
+  while (divContainer.firstChild) {
+    divContainer.removeChild(divContainer.firstChild);
+  }
   let div = document.createElement("DIV");
   div.setAttribute("class", "button-container");
+  div.innerHTML = keyEvent;
+  divContainer.appendChild(div);
 }
