@@ -1,14 +1,29 @@
 document.body.addEventListener("keyup", function(event) {
-  addKey(event.key);
+  mainFunc(event.key);
 });
 
-function addKey(keyEvent) {
+function mainFunc(keyEvent) {
   divContainer = document.getElementById("keyDisplayContainer");
-  while (divContainer.firstChild) {
-    divContainer.removeChild(divContainer.firstChild);
-  }
-  let div = document.createElement("DIV");
-  div.setAttribute("class", "button-container");
+  let testArr = [];
+  testArr.push(keyEvent);
+  console.log(testArr);
+  testArr = [];
+  clearExistingKey(divContainer);
+  let div = createKey();
   div.innerHTML = keyEvent;
   divContainer.appendChild(div);
 }
+
+function clearExistingKey(divContainer) {
+  while (divContainer.firstChild) {
+    divContainer.removeChild(divContainer.firstChild);
+  }
+}
+
+function createKey() {
+  let div = document.createElement("div");
+  div.setAttribute("class", "button-container");
+  return div;
+}
+
+function checkForMultipleKeys() {}
