@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import createStore from "redux";
 import combineReducers from "redux";
 
