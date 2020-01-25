@@ -48,3 +48,9 @@ const accounting = (bagOfMoney, action) => {
 
   return bagOfMoney;
 };
+
+const policies = (listOfPolicies = [], action) => {
+  if (action.type === "CREATE_POLICY") {
+    return [...listOfPolicies, action.payload.name];
+  }
+};
