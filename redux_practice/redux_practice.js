@@ -1,4 +1,5 @@
-import { createStore, combineReducers } from "redux";
+import createStore from "redux";
+import combineReducers from "redux";
 
 // people dropping off a form (action creators)
 const createPolicy = (name, amount) => {
@@ -71,3 +72,4 @@ const store = createStore(ourDepartments);
 const action = createPolicy("Alex", 20);
 
 store.dispatch(action);
+console.log(store.getState());
