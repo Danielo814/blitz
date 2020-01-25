@@ -30,7 +30,7 @@ const createClaim = (name, amountOfMoneyToCollect) => {
 };
 
 //reducers (departments)
-const claimsHistory = (oldListOfClaims, action) => {
+const claimsHistory = (oldListOfClaims = [], action) => {
   if (action.type === "CREATE_CLAIM") {
     // we care about this action (or form)!
     return [...oldListOfClaims, action.payload];
