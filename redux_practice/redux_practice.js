@@ -36,4 +36,5 @@ const claimsHistory = (oldListOfClaims, action) => {
     return [...oldListOfClaims, action.payload];
   }
   // we dont care about this action
+  return oldListOfClaims;
 };
