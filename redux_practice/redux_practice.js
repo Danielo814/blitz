@@ -66,3 +66,8 @@ const ourDepartments = combineReducers({
   claimsHistory: claimsHistory,
   policies: policies
 });
+
+const store = createStore(ourDepartments);
+const action = createPolicy("Alex", 20);
+
+store.dispatch(action);
