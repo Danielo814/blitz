@@ -38,3 +38,9 @@ const claimsHistory = (oldListOfClaims = [], action) => {
   // we dont care about this action
   return oldListOfClaims;
 };
+
+const account = (bagOfMoney, action) => {
+  if (action.type === "CREATE_CLAIM") {
+    return bagOfMoney - action.payload.amountOfMoneyToCollect;
+  }
+};
