@@ -55,4 +55,6 @@ const policies = (listOfPolicies = [], action) => {
   } else if (action.type === "DELETE_POLICY") {
     return listOfPolicies.filter(name => name !== action.payload.name);
   }
+
+  return listOfPolicies;
 };
