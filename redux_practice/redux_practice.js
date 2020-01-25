@@ -39,7 +39,7 @@ const claimsHistory = (oldListOfClaims = [], action) => {
   return oldListOfClaims;
 };
 
-const account = (bagOfMoney, action) => {
+const accounting = (bagOfMoney, action) => {
   if (action.type === "CREATE_CLAIM") {
     return bagOfMoney - action.payload.amountOfMoneyToCollect;
   }
