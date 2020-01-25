@@ -45,4 +45,6 @@ const accounting = (bagOfMoney, action) => {
   } else if (action.type === "CREATE_POLICY") {
     return bagOfMoney + action.payload.amount;
   }
+
+  return bagOfMoney;
 };
