@@ -1,3 +1,5 @@
+import { createStore, combineReducers } from "redux";
+
 // people dropping off a form (action creators)
 const createPolicy = (name, amount) => {
   return {
@@ -58,3 +60,9 @@ const policies = (listOfPolicies = [], action) => {
 
   return listOfPolicies;
 };
+
+const ourDepartments = combineReducers({
+  accounting: accounting,
+  claimsHistory: claimsHistory,
+  policies: policies
+});
