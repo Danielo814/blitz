@@ -1,11 +1,20 @@
 // people dropping off a form (action creators)
-const createPolicy = () => {
+const createPolicy = (name, amount) => {
   return {
     //action (a form in our analogy)
     type: "CREATE_POLICY",
     payload: {
-      name: "Alex",
-      amount: 20
+      name: name,
+      amount: amount
+    }
+  };
+};
+
+const deletePolicy = name => {
+  return {
+    type: "DELETE_POLICY",
+    payload: {
+      name: name
     }
   };
 };
