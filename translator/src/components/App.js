@@ -8,6 +8,7 @@ class App extends React.Component {
       <div className="ui container">
         <div>
           <i className="flag us" />
+          <i className="flag nl" />
         </div>
       </div>
     );
