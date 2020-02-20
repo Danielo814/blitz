@@ -10,3 +10,5 @@ const UserCreate = () => {
     </div>
   );
 };
+
+export default UserCreate;
