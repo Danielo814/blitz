@@ -10,10 +10,14 @@ class App extends React.Component {
   };
 
   render() {
+    const text =
+      this.state.language === "english"
+        ? "Select a language: "
+        : "Selecteer een taal: ";
     return (
       <div className="ui container">
         <div>
-          Select a language:
+          {text}
           <i
             className="flag us"
             onClick={() => this.onLanguageChange("english")}
