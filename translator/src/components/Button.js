@@ -1,4 +1,5 @@
 import React from "react";
+import LanguageContext from "../context/LanguageContext";
 
 class Button extends React.Component {
   render() {
