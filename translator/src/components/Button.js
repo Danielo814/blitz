@@ -3,7 +3,11 @@ import LanguageContext from "../context/LanguageContext";
 
 class Button extends React.Component {
   render() {
-    return <button className="ui button primary">{text}</button>;
+    return (
+      <button className="ui button primary">
+        <LanguageContext.Consumer></LanguageContext.Consumer>
+      </button>
+    );
   }
 }
 
