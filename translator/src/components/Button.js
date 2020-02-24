@@ -11,7 +11,7 @@ class Button extends React.Component {
     return (
       <ColorContext.Consumer>
         {color => (
-          <button className="ui button primary">
+          <button className={`ui button ${color}`}>
             <LanguageContext.Consumer>
               {value => this.renderSubmit(value)}
             </LanguageContext.Consumer>
