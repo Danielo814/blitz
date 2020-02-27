@@ -18,7 +18,7 @@ export default class App extends React.Component {
     return (
       <div className="ui container">
         <div>
-          {text}
+          <p>{text}</p>
           <i
             className="flag us"
             onClick={() => this.onLanguageChange("english")}
