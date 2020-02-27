@@ -3,7 +3,7 @@ import UserCreate from "./UserCreate";
 import LanguageContext from "../context/LanguageContext";
 import ColorContext from "../context/ColorContext";
 
-class App extends React.Component {
+export default class App extends React.Component {
   state = { language: "english" };
 
   onLanguageChange = language => {
