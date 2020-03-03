@@ -2,6 +2,7 @@ import React from "react";
 import UserCreate from "./UserCreate";
 import LanguageContext from "../context/LanguageContext";
 import ColorContext from "../context/ColorContext";
+import LanguageSelector from "./LanguageSelector";
 
 export default class App extends React.Component {
   state = { language: "english" };
@@ -17,6 +18,7 @@ export default class App extends React.Component {
         : "Selecteer een taal: ";
     return (
       <div className="ui container">
+        <LanguageSelector />
         <ColorContext.Provider value="red">
           <LanguageContext.Provider value={this.state.language}>
             <UserCreate />
