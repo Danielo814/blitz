@@ -18,7 +18,7 @@ export default class App extends React.Component {
         : "Selecteer een taal: ";
     return (
       <div className="ui container">
-        <LanguageSelector />
+        <LanguageSelector onLanguageChange={this.onLanguageChange} />
         <ColorContext.Provider value="red">
           <LanguageContext.Provider value={this.state.language}>
             <UserCreate />
