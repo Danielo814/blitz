@@ -17,17 +17,6 @@ export default class App extends React.Component {
         : "Selecteer een taal: ";
     return (
       <div className="ui container">
-        <div>
-          <p>{text}</p>
-          <i
-            className="flag us"
-            onClick={() => this.onLanguageChange("english")}
-          />
-          <i
-            className="flag nl"
-            onClick={() => this.onLanguageChange("dutch")}
-          />
-        </div>
         <ColorContext.Provider value="red">
           <LanguageContext.Provider value={this.state.language}>
             <UserCreate />
