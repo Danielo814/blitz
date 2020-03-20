@@ -10,9 +10,6 @@
 
 function reverseInt(n) {
   let reversed = n.toString().split("");
-  if (n < 0) {
-    reversed.shift();
-  }
   reversed = parseInt(reversed.reverse().join(""), 10);
   return n < 0 ? reversed * -1 : reversed;
 }
