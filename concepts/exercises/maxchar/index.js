@@ -7,10 +7,19 @@
 
 function maxChar(str) {
   let occObj = {};
+  let max = 0;
+  let maxChar = "";
   for (let character of str) {
     occObj[character] = occObj[character] + 1 || 1;
   }
-  return occObj;
+
+  for (let char in occObj) {
+    if (occObj[char] > max) {
+      max = occObj[char];
+      maxChar = char;
+    }
+  }
+  return maxChar;
 }
 
 module.exports = maxChar;
