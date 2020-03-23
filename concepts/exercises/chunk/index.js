@@ -14,12 +14,22 @@ function chunk(array, size) {
     const last = chunked[chunked.length - 1];
 
     if (!last || last.length === size) {
+      //   console.log(last);
       chunked.push([element]);
     } else {
       last.push(element);
     }
+    // console.log(chunked);
+    // console.log(last);
   }
   return chunked;
 }
 
-module.exports = chunk;
+chunk([2, 3, 4, 5, 6, 7, 8], 3);
+
+// module.exports = chunk;
+
+const arr = [[2]];
+const lastar = arr[0];
+lastar.push(2);
+console.log(arr);
