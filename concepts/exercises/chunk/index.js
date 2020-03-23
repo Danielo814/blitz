@@ -18,8 +18,6 @@ function chunk(array, size) {
     } else {
       last.push(element);
     }
-    // console.log(chunked);
-    // console.log(last);
   }
   return chunked;
 }
