@@ -6,16 +6,16 @@
 // maxChar("apple 1231111") === "1"
 
 function maxChar(str) {
-  let occObj = {};
+  let mapChar = {};
   let max = 0;
   let maxChar = "";
   for (let character of str) {
-    occObj[character] = occObj[character] + 1 || 1;
+    mapChar[character] = mapChar[character] + 1 || 1;
   }
 
-  for (let char in occObj) {
-    if (occObj[char] > max) {
-      max = occObj[char];
+  for (let char in mapChar) {
+    if (mapChar[char] > max) {
+      max = mapChar[char];
       maxChar = char;
     }
   }
