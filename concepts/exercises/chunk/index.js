@@ -28,8 +28,3 @@ function chunk(array, size) {
 chunk([2, 3, 4, 5, 6, 7, 8], 3);
 
 // module.exports = chunk;
-
-const arr = [[2]];
-const lastar = arr[0];
-lastar.push(2);
-console.log(arr);
