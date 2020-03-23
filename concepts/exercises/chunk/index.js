@@ -14,7 +14,6 @@ function chunk(array, size) {
     const last = chunked[chunked.length - 1];
 
     if (!last || last.length === size) {
-      //   console.log(last);
       chunked.push([element]);
     } else {
       last.push(element);
