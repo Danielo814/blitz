@@ -5,6 +5,11 @@ const InstagramFeed = () => {
   const updateUsername = (event) => {
     setUsername(event.target.value);
   };
+
+  const fetchFeed = () => {
+    console.log(`fetch feed for: ${username}`);
+  };
+
   return (
     <div className="container">
       <div className="row">
@@ -16,7 +21,7 @@ const InstagramFeed = () => {
             className="form-control"
             placeholder="Username"
           />
-          <button>Get Instagram Posts</button>
+          <button onClick={() => fetchFeed()}>Get Instagram Posts</button>
         </div>
         <div className="col-md-9"></div>
       </div>
